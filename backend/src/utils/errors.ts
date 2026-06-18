@@ -38,13 +38,6 @@ export class NotFoundError extends AppError {
   }
 }
 
-export class ConflictError extends AppError {
-  constructor(message: string = "Resource already exists") {
-    super(message, 409, true, "CONFLICT");
-    Object.setPrototypeOf(this, ConflictError.prototype);
-  }
-}
-
 export class InternalServerError extends AppError {
   constructor(message: string = "Internal server error") {
     super(message, 500, false, "INTERNAL_SERVER_ERROR");

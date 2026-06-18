@@ -71,7 +71,7 @@ export const deleteApplication = asyncHandler(
     try {
       const applicationId = req.params.id as string;
       await applicationService.deleteApplication(applicationId);
-      successResponse(res, null, "Application deleted successfully.");
+      successResponse(res, null, "Application deleted successfully.", 204);
     } catch (err) {
       next(err);
     }
