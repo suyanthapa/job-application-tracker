@@ -12,16 +12,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/applications/?page=1&limit=4",
-          "protocol": "http",
+          "raw": "{{Job Tracker - Base API}}?page=1&limit=4",
           "host": [
-            "localhost"
-          ],
-          "port": "3000",
-          "path": [
-            "api",
-            "applications",
-            ""
+            "{{Job Tracker - Base API}}"
           ],
           "query": [
             {
@@ -52,15 +45,9 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/api/applications",
-          "protocol": "http",
+          "raw": "{{Job Tracker - Base API}}",
           "host": [
-            "localhost"
-          ],
-          "port": "3000",
-          "path": [
-            "api",
-            "applications"
+            "{{Job Tracker - Base API}}"
           ]
         }
       },
@@ -81,16 +68,12 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/api/applications/f1f55d55-38fa-4ff6-9a23-353d17b2f10e",
-          "protocol": "http",
+          "raw": "{{Job Tracker - Base API}}/d5f10901-012f-4f08-82bc-53dd8056ae25",
           "host": [
-            "localhost"
+            "{{Job Tracker - Base API}}"
           ],
-          "port": "3000",
           "path": [
-            "api",
-            "applications",
-            "f1f55d55-38fa-4ff6-9a23-353d17b2f10e"
+            "d5f10901-012f-4f08-82bc-53dd8056ae25"
           ]
         }
       },
@@ -102,16 +85,12 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/applications/f1f55d55-38fa-4ff6-9a23-353d17b2f10e",
-          "protocol": "http",
+          "raw": "{{Job Tracker - Base API}}/d5f10901-012f-4f08-82bc-53dd8056ae25",
           "host": [
-            "localhost"
+            "{{Job Tracker - Base API}}"
           ],
-          "port": "3000",
           "path": [
-            "api",
-            "applications",
-            "f1f55d55-38fa-4ff6-9a23-353d17b2f10e"
+            "d5f10901-012f-4f08-82bc-53dd8056ae25"
           ]
         }
       },
@@ -123,15 +102,11 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/applications/f1f55d55-38fa-4ff6-9a23-353d17b2f10e",
-          "protocol": "http",
+          "raw": "{{Job Tracker - Base API}}/f1f55d55-38fa-4ff6-9a23-353d17b2f10e",
           "host": [
-            "localhost"
+            "{{Job Tracker - Base API}}"
           ],
-          "port": "3000",
           "path": [
-            "api",
-            "applications",
             "f1f55d55-38fa-4ff6-9a23-353d17b2f10e"
           ]
         }
