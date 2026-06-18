@@ -2,6 +2,11 @@
 
 A RESTful API backend for tracking job applications built with Express.js, TypeScript, and Prisma.
 
+## Live Deployment
+
+**Production API**: https://job-application-tracker-backend-h1p4.onrender.com  
+**Base URL for requests**: `https://job-application-tracker-backend-h1p4.onrender.com/`
+
 ## Tech Stack
 
 - **Runtime**: Node.js
@@ -148,8 +153,16 @@ NODE_ENV=development
 
 ### Base URL
 
+**Development (Local)**:
+
 ```
-http://localhost:3000/api
+http://localhost:3000/api/applications
+```
+
+**Production (Render)**:
+
+```
+https://job-application-tracker-backend-h1p4.onrender.com/api/applications
 ```
 
 ### Endpoints
