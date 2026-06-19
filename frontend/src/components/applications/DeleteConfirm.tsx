@@ -23,7 +23,7 @@ export function DeleteConfirm({ application, onConfirm, onCancel }: Props) {
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to delete.");
     } finally {
-      setLoading(false); /
+      setLoading(false);
     }
   };
 
