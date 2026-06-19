@@ -14,6 +14,8 @@ Backend -- Render
 job-application-tracker/
 ├── frontend/        # Next.js app (UI, Zod validation, Axios API layer)
 └── backend/         # Express.js REST API (TypeScript, Prisma, PostgreSQL)
+├── screenshots-api and video/    # API response screenshots / Demo walkthrough video of the app
+├── docker-compose.yml/    # Docker
 ```
 
 ---
@@ -47,6 +49,9 @@ npm run dev
 Runs on → `http://localhost:3001`
 
 ---
+## Docker (Dev)
+
+A `docker-compose.yml` is provided at the project root .
 
 ## Environment Variables
 
