@@ -11,7 +11,9 @@ import prisma from "../config/prisma";
 export const listApplications = async (
   query: ListApplicationsQuery,
 ): Promise<PaginatedResponse<Application>> => {
-  const { status, search, page = 1, limit = 10 } = query;
+  const { status, search } = query;
+  const page = Number(query.page) || 1;
+  const limit = Number(query.limit) || 10;
   const skip = (page - 1) * limit;
 
   // Build dynamic where clause
