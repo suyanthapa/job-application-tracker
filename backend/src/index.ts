@@ -1,5 +1,6 @@
 import "dotenv/config";
 import express from "express";
+import cors from "cors";
 import applicationRouter from "./routes/application.routes";
 import { errorHandler, notFoundHandler } from "./middleware/errorHandler";
 import prisma from "./config/prisma";
@@ -8,7 +9,17 @@ import { DatabaseError } from "./utils/errors";
 const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
-// Body parsers
+// CORS Configuration
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+    credentials: false,
+  }),
+);
+
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
