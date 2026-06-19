@@ -18,12 +18,22 @@ export function DeleteConfirm({ application, onConfirm, onCancel }: Props) {
     if (!application) return;
     setLoading(true);
     setError(null);
-    try { await onConfirm(application.id); }
-    catch (err) { setError(err instanceof Error ? err.message : "Failed to delete."); setLoading(false); }
+    try {
+      await onConfirm(application.id);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to delete.");
+    } finally {
+      setLoading(false); /
+    }
   };
 
   return (
-    <Modal isOpen={!!application} onClose={onCancel} title="Delete Application" maxWidth="sm">
+    <Modal
+      isOpen={!!application}
+      onClose={onCancel}
+      title="Delete Application"
+      maxWidth="sm"
+    >
       <div className="flex flex-col gap-4">
         <div className="rounded-xl bg-red-50 border border-red-100 p-4">
           <p className="text-sm text-red-800">
@@ -33,10 +43,18 @@ export function DeleteConfirm({ application, onConfirm, onCancel }: Props) {
             This action cannot be undone.
           </p>
         </div>
-        {error && <p className="rounded-lg bg-red-50 border border-red-100 px-3 py-2 text-sm text-red-600">{error}</p>}
+        {error && (
+          <p className="rounded-lg bg-red-50 border border-red-100 px-3 py-2 text-sm text-red-600">
+            {error}
+          </p>
+        )}
         <div className="flex justify-end gap-2">
-          <Button variant="secondary" onClick={onCancel} disabled={loading}>Cancel</Button>
-          <Button variant="danger" onClick={handleConfirm} loading={loading}>Delete Application</Button>
+          <Button variant="secondary" onClick={onCancel} disabled={loading}>
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={handleConfirm} loading={loading}>
+            Delete Application
+          </Button>
         </div>
       </div>
     </Modal>
