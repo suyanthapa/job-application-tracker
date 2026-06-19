@@ -4,6 +4,10 @@ A full-stack job application tracking app. Built with **Next.js** (frontend) and
 
 ---
 
+# Live on : https://job-application-tracker-xi-liard.vercel.app/
+
+Frontend -- Vercel
+Backend -- Render
 ## Project Structure
 
 ```
